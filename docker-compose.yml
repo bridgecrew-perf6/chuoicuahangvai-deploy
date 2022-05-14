@@ -1,14 +1,18 @@
 services:
   admin:
     build: 
-      context: chuoiduahangvai-admin
+      context: chuoicuahangvai-admin
     ports:
       - 8888:8888
+    depends_on:
+      - database
   be:
     build: 
-      context: chuoiduahangvai-be
+      context: chuoicuahangvai-be
     ports:
       - 1337:1337
+    depends_on:
+      - database
   database:
     image: postgres:14.2-alpine
     environment:
