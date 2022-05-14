@@ -1,0 +1,9 @@
+[submodule "chuoicuahangvai-client"]
+	path = chuoicuahangvai-client
+	url = https://github.com/bathongkt123/chuoicuahangvai-client
+[submodule "chuoicuahangvai-admin"]
+	path = chuoicuahangvai-admin
+	url = https://github.com/ngthluu/chuoicuahangvai-admin
+[submodule "chuoicuahangvai-be"]
+	path = chuoicuahangvai-be
+	url = https://github.com/ngthluu/chuoicuahangvai-be
