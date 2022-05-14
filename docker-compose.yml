@@ -1,27 +1,17 @@
 services:
   admin:
-    image: node:16.13.1-alpine
-    command: sh -c "npm install && npm start"
+    build: 
+      context: chuoiduahangvai-admin
     ports:
       - 8888:8888
-    working_dir: /chuoicuahangvai-admin
-    volumes:
-      - ./:/chuoicuahangvai-admin
-    env_file:
-      - /chuoicuahangvai-admin/.env
   be:
-    image: node:16.13.1-alpine
-    command: sh -c "yarn install && yarn run dev"
+    build: 
+      context: chuoiduahangvai-be
     ports:
       - 1337:1337
-    working_dir: /chuoicuahangvai-be
-    volumes:
-      - ./:/chuoicuahangvai-be
-    env_file:
-      - /chuoicuahangvai-be/.env
   database:
     image: postgres:14.2-alpine
     environment:
-      POSTGRES_DB:chuoicuahangvai-db
-      POSTGRES_USER:postgres
-      POSTGRES_PASSWORD:postgres
+      POSTGRES_DB: chuoicuahangvai-db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
