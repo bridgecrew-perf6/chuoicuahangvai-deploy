@@ -32,7 +32,7 @@ services:
     expose:
       - "5000"
     deploy:
-      replicas: 3
+      replicas: 1
   
   database:
     image: postgres:14.2-alpine
