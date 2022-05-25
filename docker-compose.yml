@@ -23,6 +23,8 @@ services:
   be:
     build: 
       context: chuoicuahangvai-be
+    volumes:
+      - ./data/uploads:/chuoicuahangvai-be/public/uploads
     depends_on:
       - database
     environment:
