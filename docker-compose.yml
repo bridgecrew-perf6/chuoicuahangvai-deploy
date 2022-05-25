@@ -40,3 +40,5 @@ services:
       POSTGRES_DB: chuoicuahangvai-db
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
+    volumes:
+      - ./data/database.sql:/docker-entrypoint-initdb.d/chuoicuahangvai-db.sql
